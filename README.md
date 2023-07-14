@@ -1,6 +1,6 @@
 ## Ausgerechnet Algorithmen
 
-[Dan Verständig](https://https://www.uni-bielefeld.de/ew/verstaendig), [Janne Stricker](https://www.uni-bielefeld.de/ew/stricker)
+[Dan Verständig](https://www.uni-bielefeld.de/ew/verstaendig), [Janne Stricker](https://www.uni-bielefeld.de/ew/stricker)
 
 Universität Bielefeld
 
