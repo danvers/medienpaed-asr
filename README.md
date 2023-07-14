@@ -14,7 +14,7 @@ Zunächst wird die Spracheingabe in elektronische bzw. digitale Daten umgewandel
 
 Auch Soziale Medien bieten inzwischen auch verschiedene Möglichkeiten der Verarbeitung von Spracheingabe an. Gerade für Menschen mit Behinderungen könnten Anwendungen zur Spracherkennung hilfreich bei der Artikulation oder Teilhabe sein. Dennoch gibt es sowohl technische als auch menschliche Faktoren, die Entwicklungen in diesem Bereich ausbremst.
 
-**Der hier abgelegte Code dient zur Exploration von Spracherkennung und steht im Zusammenhang zur Publikation Ausgerechnet Algorithmen (2023). Die Publikation geht auf die Präsentation der Forschung zu Teilhabefragen und ASR am Beispiel von TikTok  auf der Herbsttagung der Sektion Medienpädagogik an der Universität Bielefeld im Jahr 2022 zurück.**Der Code setzt sich aus einem einfachen Skript zur Spracherkennung allgemein und einem Live System, welches mit [Google Speech Recognition](https://cloud.google.com/speech-to-texthttps:/) arbeitet.
+Der hier abgelegte Code dient zur Exploration von Spracherkennung und steht im Zusammenhang zur Publikation Ausgerechnet Algorithmen (2023). Die Publikation geht auf die Präsentation der Forschung zu Teilhabefragen und ASR am Beispiel von TikTok  auf der Herbsttagung der Sektion Medienpädagogik an der Universität Bielefeld im Jahr 2022 zurück. Der Code setzt sich aus einem einfachen Skript zur Spracherkennung allgemein und einem Live System, welches mit [Google Speech Recognition](https://cloud.google.com/speech-to-texthttps:/) arbeitet.
 
 ## Wie man den Code benutzen kann
 
