@@ -14,9 +14,7 @@ Zunächst wird die Spracheingabe in elektronische bzw. digitale Daten umgewandel
 
 Auch Soziale Medien bieten inzwischen auch verschiedene Möglichkeiten der Verarbeitung von Spracheingabe an. Gerade für Menschen mit Behinderungen könnten Anwendungen zur Spracherkennung hilfreich bei der Artikulation oder Teilhabe sein. Dennoch gibt es sowohl technische als auch menschliche Faktoren, die Entwicklungen in diesem Bereich ausbremst.
 
-Der hier abgelegte Code dient zur Exploration von Spracherkennung und steht im Zusammenhang zur Publikation Ausgerechnet Algorithmen (2023). Die Publikation geht auf die Präsentation der Forschung zu Teilhabefragen und ASR am Beispiel von TikTok  auf der Herbsttagung der Sektion Medienpädagogik an der Universität Bielefeld im Jahr 2022 zurück.
-
-Der Code setzt sich aus einem einfachen Skript zur Spracherkennung allgemein und einem Live System, welches mit [Google Speech Recognition](https://cloud.google.com/speech-to-texthttps:/) arbeitet.
+**Der hier abgelegte Code dient zur Exploration von Spracherkennung und steht im Zusammenhang zur Publikation Ausgerechnet Algorithmen (2023). Die Publikation geht auf die Präsentation der Forschung zu Teilhabefragen und ASR am Beispiel von TikTok  auf der Herbsttagung der Sektion Medienpädagogik an der Universität Bielefeld im Jahr 2022 zurück.**Der Code setzt sich aus einem einfachen Skript zur Spracherkennung allgemein und einem Live System, welches mit [Google Speech Recognition](https://cloud.google.com/speech-to-texthttps:/) arbeitet.
 
 ## Wie man den Code benutzen kann
 
@@ -33,6 +31,5 @@ Das Skript nutzt die Bibliothek [SpeechRecognition](https://pypi.org/project/Spe
 ### ASR mit Google Cloud
 
 Die Nutzung des Skripts erfordert eine Internetverbindung sowie einen Google Account. Die Authentifizierung erfolgt über [`gcloud auth`](https://cloud.google.com/sdk/gcloud/reference/auth).
-
 
 Die Google-Spracherkennungs-API ist eine einfache Methode, um Sprache in Text umzuwandeln, aber sie erfordert eine Internetverbindung. Zudem werden die Daten mit Google verarbeitet. Da Google als Dienstanbieter agiert, können auch Kosten bei der Nutzung von Cloud-Diensten entstehen.
