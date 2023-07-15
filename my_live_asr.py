@@ -1,4 +1,7 @@
-#Ein komplexeres Beispiel zur automatischen Spracherkennung und Textvisualisierung mit der Google Cloud Speech Recognition.
+# Ein komplexeres Beispiel zur automatischen Spracherkennung und Textvisualisierung
+# mit der Google Cloud Speech Recognition.
+# Das Skript läuft im Terminal.
+
 from __future__ import division
 from google.cloud import speech
 import re
@@ -7,9 +10,10 @@ import pyaudio
 import queue
 
 #Aufzeichnungsparameter
-RATE = 16000
+
+RATE = 16000 #16 khz
 CHUNK = int(RATE / 10)  #100ms
-language_code = "de-DE"
+language_code = "de-DE" #Erkennung folgt der deutschen Sprache
 
 class MicrophoneStream(object):
     # Öffnet einen Aufnahmestream als Generator, der die Audioblöcke erzeugt.
@@ -17,7 +21,7 @@ class MicrophoneStream(object):
         self._rate = rate
         self._chunk = chunk
 
-        # Create a thread-safe buffer of audio data
+        # Puffer für die Audio-Daten erstellen.
         self._buff = queue.Queue()
         self.closed = True
 
@@ -127,7 +131,12 @@ def listen_print_loop(responses):
 
             num_chars_printed = 0
 
-
+# Main Loop, hier wird das Skript gestartet.
+# Der Main Loop wird verwendet, um auf Ereignisse zu warten und auf sie zu reagieren. 
+# Dies können Benutzereingaben, Systemereignisse oder andere Arten von Ereignissen sein, 
+# die in der Anwendung auftreten. 
+# Der Main Loop überprüft regelmäßig auf neue Ereignisse und führt entsprechende Aktionen
+# oder Funktionen aus, um auf diese Ereignisse zu reagieren.
 def main():
     client = speech.SpeechClient()
     config = speech.RecognitionConfig(
