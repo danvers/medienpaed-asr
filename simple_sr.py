@@ -1,4 +1,6 @@
-# Ein einfaches Beispielskript zur Spracherkennung mit Eingabe per Mikrofon.
+# Ein einfaches Beispielskript zur Spracherkennung 
+# mit Eingabe per Mikrofon ohne User Interface.
+# Das Skript wird im Terminal ausgeführt.
 import speech_recognition as sr
 r = sr.Recognizer()
 with sr.Microphone() as source:
