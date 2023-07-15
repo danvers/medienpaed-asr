@@ -2,7 +2,6 @@
 
 [Dan Verständig](https://www.uni-bielefeld.de/ew/verstaendig), [Janne Stricker](https://www.uni-bielefeld.de/ew/stricker)
 
-Universität Bielefeld
 
 ## Allgemeine Informationen
 
