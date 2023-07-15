@@ -22,14 +22,37 @@ Die Skripte sind kommentiert. Anhand der Kommentierungen sollte man grundlegend 
 
 Der Code dient zur Grundlage, um über die Systeme und Wirkweisen in medienpädagogischen Settings ins Gespräch zu kommen.
 
-Die Skripte erfordern [Python 3](https://www.python.org/downloads/) und eine Entwicklungsumgebung. Wir empfehlen [Microsoft Visual Code](https://code.visualstudio.comhttps:/). Python kann mit [diesem Codeschnipsel von Michael Currin](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23) installiert werden.
+### Installation
+
+1. Die Skripte erfordern [Python 3](https://www.python.org/downloads/) und eine Entwicklungsumgebung. Python kann mit [diesem Codeschnipsel von Michael Currin](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23) installiert werden.
+2. Wir empfehlen [Microsoft Visual Code](https://code.visualstudio.comhttps:/) als Entwicklungsumgebung.
+3. Für die Skripte sind jeweils unterschiedliche Python Bibliotheken notwendig. Diese können über die Paketverwaltung installiert werden.
 
 ### Einfache Spracherkennung: simple_sr.py
 
 Das Skript nutzt die Bibliothek [SpeechRecognition](https://pypi.org/project/SpeechRecognition/). Es handelt sich um eine Umgebung mit Unterstützung für verschiedene Engines und Schnittstellen, die Spracherkennung sowohl online als auch offline ermöglichen.
 
-### ASR mit Google Cloud
+### Spracherkennung mit User Interface: simple_sr_ui.py
+
+Das Skript startet die Anwendung mit einer deutschsprachigen Benutzeroberfläche. Man kann entweder eine Audiodatei auswählen oder das Mikrofon für die Spracherkennung verwenden. Der erkannte Text wird auf der Benutzeroberfläche angezeigt. 
+
+Tipp: man kann am MacOs auch eigene Sprachdateien über den say-Befehl im Terminal generieren. Ein einfaches Beispiel wäre wie folgt:
+
+`say "Hallo, das ist eine Testaufnahme." -o "biespielaufnahme.wav" --data-format=LEI16@32000`
+
+### ASR mit Google Cloud: my_live_transcription.py
+
+Dieses Skript verwendet die Google Cloud Speech Recognition API, um Sprache in Text umzuwandeln. Es erlaubt die Eingabe von Sprache über ein Mikrofon und die Echtzeittranskription im Terminal.
 
 Die Nutzung des Skripts erfordert eine Internetverbindung sowie einen Google Account. Die Authentifizierung erfolgt über [`gcloud auth`](https://cloud.google.com/sdk/gcloud/reference/auth).
 
-Die Google-Spracherkennungs-API ist eine einfache Methode, um Sprache in Text umzuwandeln, aber sie erfordert eine Internetverbindung. Zudem werden die Daten mit Google verarbeitet. Da Google als Dienstanbieter agiert, können auch Kosten bei der Nutzung von Cloud-Diensten entstehen.
+**Die Google-Spracherkennungs-API ist eine vergleichsweise niederschwellige Methode, um Sprache in Text umzuwandeln, aber sie erfordert eine Internetverbindung. Zudem werden die Daten mit Google verarbeitet. Da Google als Dienstanbieter agiert, können auch Kosten bei der Nutzung von Cloud-Diensten entstehen.**
+
+Das Skript ist kommentiert und sollte auch Zeile für Zeile erklärbar sein. Hier ist eine Erläuterung des Skripts:
+
+1. Es werden die benötigten Module und Klassen importiert: `division` aus `__future__` für die Division, `speech` aus `google.cloud` für die Google Cloud Speech Recognition API, `re` für reguläre Ausdrücke, `sys` für den Zugriff auf das System und `pyaudio` für die Audioaufnahme und -wiedergabe. Die `queue`-Klasse wird für das Puffern von Audiodaten verwendet.
+2. Es werden einige Aufzeichnungsparameter festgelegt, wie die Abtastrate (`RATE`), die Größe des Audioblocks (`CHUNK`) und der Sprachcode (`language_code`) für die Spracherkennung. Diese Parameter können je nach Anforderungen und Geräteeinstellungen angepasst werden.
+3. Die Klasse `MicrophoneStream` wird definiert. Diese Klasse öffnet einen Aufnahmestream und dient als Generator, um Audioblöcke zu erzeugen. Der Generator sammelt kontinuierlich Daten aus dem Audio-Stream in einem Puffer (`_buff`).
+4. Die Methode `listen_print_loop` wird definiert. Sie iteriert durch die Serverantworten der Spracherkennung und gibt sie aus. Es wird nur die Transkription der obersten Alternative des obersten Ergebnisses zurückgegeben. Zwischenergebnisse werden während der Spracherkennung angezeigt, und für endgültige Ergebnisse wird ein Zeilenumbruch ausgegeben. Das Skript wird beendet, wenn das erkannte Wort "quit" oder "tschüss" ist.
+5. Die Methode `main` wird definiert. Sie ist der Haupt-Loop des Skripts. In diesem Loop wird die Verbindung zur Google Cloud Speech Recognition API hergestellt und die Spracherkennung gestartet. Dabei werden die Konfigurationen und Audioinhalte übertragen.
+6. Schließlich wird der Haupt-Loop `main` aufgerufen, um das Skript zu starten.
