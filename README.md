@@ -34,9 +34,9 @@ Das Skript nutzt die Bibliothek [SpeechRecognition](https://pypi.org/project/Spe
 
 Das Skript startet die Anwendung mit einer deutschsprachigen Benutzeroberfläche. Man kann entweder eine Audiodatei auswählen oder das Mikrofon für die Spracherkennung verwenden. Der erkannte Text wird auf der Benutzeroberfläche angezeigt.
 
-Tipp: man kann am MacOs auch eigene Sprachdateien über den say-Befehl im Terminal generieren. Ein einfaches Beispiel wäre wie folgt:
+![image](img/asr-ui.png)
 
-`say "Hallo, das ist eine Testaufnahme." -o "biespielaufnahme.wav" --data-format=LEI16@32000`
+**Tipp: man kann am MacOs auch eigene Sprachdateien über den say-Befehl im Terminal generieren. Ein einfaches Beispiel wäre wie folgt:**`say "Hallo, das ist eine Testaufnahme." -o "biespielaufnahme.wav" --data-format=LEI16@32000`
 
 Die Kernfunktion des Skripts ist die Audioverarbeitung entweder aus einer Audiodatei oder einer direkten Spracheingabe. Die Sprache ist fest auf Deutsch eingestellt, kann aber im Code beispielsweise auf Englisch `"en-US"` geändert werden.
 
