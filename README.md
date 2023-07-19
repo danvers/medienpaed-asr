@@ -2,7 +2,6 @@
 
 [Dan Verständig](https://www.uni-bielefeld.de/ew/verstaendig), [Janne Stricker](https://www.uni-bielefeld.de/ew/stricker)
 
-
 ## Allgemeine Informationen
 
 Gesprochene Sprache ist für Menschen ein besonders wichtiges Kommunikationsmittel, und die Mehrheit der Weltbevölkerung verlässt sich auf Sprache, um miteinander zu kommunizieren. [Automatische Systeme der Spracherkennung](https://de.wikipedia.org/wiki/Spracherkennung) (ASR) übersetzen gesprochene Sprachen in Text. Es gibt verschiedene Beispiele für ASR. Zum Beispiel erkennt [Siri](https://de.wikipedia.org/wiki/Siri_(Software)) von Apple die Sprache und wandelt diese in Text um. Auch [Alexa](https://de.wikipedia.org/wiki/Amazon_Alexa) von Amazon erkennt automatisch Sprache und verarbeitet Befehle, die an die Geräte gehen. Die automatische Erkennung von Sprache ist ein komplexer Prozess. Ganz einfach erklärt kann er wie folgt dargestellt werden.
@@ -33,11 +32,15 @@ Das Skript nutzt die Bibliothek [SpeechRecognition](https://pypi.org/project/Spe
 
 ### Spracherkennung mit User Interface: simple_sr_ui.py
 
-Das Skript startet die Anwendung mit einer deutschsprachigen Benutzeroberfläche. Man kann entweder eine Audiodatei auswählen oder das Mikrofon für die Spracherkennung verwenden. Der erkannte Text wird auf der Benutzeroberfläche angezeigt. 
+Das Skript startet die Anwendung mit einer deutschsprachigen Benutzeroberfläche. Man kann entweder eine Audiodatei auswählen oder das Mikrofon für die Spracherkennung verwenden. Der erkannte Text wird auf der Benutzeroberfläche angezeigt.
 
 Tipp: man kann am MacOs auch eigene Sprachdateien über den say-Befehl im Terminal generieren. Ein einfaches Beispiel wäre wie folgt:
 
 `say "Hallo, das ist eine Testaufnahme." -o "biespielaufnahme.wav" --data-format=LEI16@32000`
+
+Die Kernfunktion des Skripts ist die Audioverarbeitung entweder aus einer Audiodatei oder einer direkten Spracheingabe. Die Sprache ist fest auf Deutsch eingestellt, kann aber im Code beispielsweise auf Englisch `"en-US"` geändert werden.
+
+![image](img/asr-pa-ui.png)
 
 ### ASR mit Google Cloud: my_live_transcription.py
 

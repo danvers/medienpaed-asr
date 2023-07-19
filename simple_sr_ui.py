@@ -20,7 +20,7 @@ class SpeechRecognitionDialog(QDialog):
         super().__init__()
 
         self.setWindowTitle("Ausgerechnet Algorithmen: Einfache Spracherkennung")
-        self.setFixedSize(400, 200)
+        self.setFixedSize(500, 220)
         self.layout = QVBoxLayout()
 
         self.title_label = QLabel("Einfache Spracherkennung")
@@ -36,8 +36,8 @@ class SpeechRecognitionDialog(QDialog):
         self.mic_button.clicked.connect(self.mic_input)
 
         self.result_label = QLabel()
-        self.result_label.setStyleSheet("font-size: 14px; font-weight: bold; margin-top: 20px;")
-        self.result_label.setText("Ergebnis wird hier angezeigt.")
+        self.result_label.setStyleSheet("margin-top: 10px; padding:5px; background-color:#f0fff4; border: 1px solid #42f572;")
+        self.result_label.setText("Die Ausgabe wird hier angezeigt.")
 
         self.layout.addWidget(self.file_button, alignment=QtCore.Qt.AlignCenter)
         self.layout.addWidget(self.mic_button, alignment=QtCore.Qt.AlignCenter)
