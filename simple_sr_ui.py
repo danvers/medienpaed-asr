@@ -5,7 +5,16 @@ import sys
 import speech_recognition as sr
 from PyQt5.QtWidgets import QApplication, QDialog, QVBoxLayout, QPushButton, QFileDialog, QLabel
 from PyQt5 import QtCore
+from PyQt5.QtCore import QThread, pyqtSignal
 
+class MicrophoneThread(QThread):
+    audio_signal = pyqtSignal(object)
+
+    def run(self):
+        recognizer = sr.Recognizer()
+        with sr.Microphone() as source:
+            audio = recognizer.listen(source)
+        self.audio_signal.emit(audio)
 class SpeechRecognitionDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -14,7 +23,7 @@ class SpeechRecognitionDialog(QDialog):
         self.setFixedSize(400, 200)
         self.layout = QVBoxLayout()
 
-        self.title_label = QLabel("Spracherkennung")
+        self.title_label = QLabel("Einfache Spracherkennung")
         self.title_label.setObjectName("titleLabel")
         self.layout.addWidget(self.title_label, alignment=QtCore.Qt.AlignCenter)
 
@@ -62,13 +71,10 @@ class SpeechRecognitionDialog(QDialog):
                 self.process_audio(audio)
 
     def mic_input(self):
-        recognizer = sr.Recognizer()
-        with sr.Microphone() as source:
-            self.result_label.setText("Warte auf Spracheingabe...")
-            QApplication.processEvents() 
-            audio = recognizer.listen(source)
-
-        self.process_audio(audio)
+        self.result_label.setText("Verarbeite Spracheingabe...")
+        self.thread = MicrophoneThread()
+        self.thread.audio_signal.connect(self.process_audio)
+        self.thread.start()
 
     def process_audio(self, audio):
         recognizer = sr.Recognizer()
