@@ -58,3 +58,12 @@ Das Skript ist kommentiert und sollte auch Zeile für Zeile, Funktion für Funkt
 4. Die Methode `listen_print_loop` wird definiert. Sie iteriert durch die Serverantworten der Spracherkennung und gibt sie aus. Es wird nur die Transkription der obersten Alternative des obersten Ergebnisses zurückgegeben. Zwischenergebnisse werden während der Spracherkennung angezeigt, und für endgültige Ergebnisse wird ein Zeilenumbruch ausgegeben. Das Skript wird beendet, wenn das erkannte Wort "quit" oder "tschüss" ist.
 5. Die Methode `main` wird definiert. Es ist der Haupt-Loop des Skripts. In diesem Loop wird die Verbindung zur Google Cloud Speech Recognition API hergestellt und die Spracherkennung gestartet. Dabei werden die Konfigurationen und Audioinhalte übertragen.
 6. Schließlich wird der Haupt-Loop `main` aufgerufen, um das Skript zu starten.
+
+### Weiterführende Links
+
+#### weitere System für Automated Speech Recognition (ASR)
+
+* [Kaldi Speech Recognition Toolkit](https://github.com/kaldi-asr/kaldi)
+* [whisper.ccp](https://github.com/ggerganov/whisper.cpp)
+* [NVIDIA DeepLearning Examples](https://github.com/NVIDIA/DeepLearningExamples)
+* [Google Speech-to-Text](https://cloud.google.com/speech-to-text)
