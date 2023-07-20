@@ -61,7 +61,7 @@ Das Skript ist kommentiert und sollte auch Zeile für Zeile, Funktion für Funkt
 
 ### Weiterführende Links
 
-weitere Automated Speech Recognition (ASR) Systeme
+Weitere Automated Speech Recognition (ASR) Systeme:
 
 * [Kaldi Speech Recognition Toolkit](https://github.com/kaldi-asr/kaldi)
 * [whisper.ccp](https://github.com/ggerganov/whisper.cpp)
