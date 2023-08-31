@@ -1,6 +1,6 @@
 ## Ausgerechnet Algorithmen
 
-[Dan Verständig](https://www.uni-bielefeld.de/ew/verstaendig), [Janne Stricker](https://www.uni-bielefeld.de/ew/stricker)
+Sourcecode und Beschreibung zum Projekt im Umgang mit automatischer Spracherkennung im Kontext einer diversitätssensiblen Medienpädagogik. Das Projekt ist Teil der Publikation Ausgerechnet Algorithmen (2023).
 
 ## Allgemeine Informationen
 
@@ -67,3 +67,7 @@ Weitere Automated Speech Recognition (ASR) Systeme:
 * [whisper.ccp](https://github.com/ggerganov/whisper.cpp)
 * [NVIDIA DeepLearning Examples](https://github.com/NVIDIA/DeepLearningExamples)
 * [Google Speech-to-Text](https://cloud.google.com/speech-to-text)
+
+### Kontakt
+
+Code und Beschreibung: [Dan Verständig](https://www.uni-bielefeld.de/ew/verstaendig)
