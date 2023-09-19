@@ -1,6 +1,8 @@
 ## Ausgerechnet Algorithmen
 
-Sourcecode und Beschreibung zum Projekt im Umgang mit automatischer Spracherkennung im Kontext einer diversitätssensiblen Medienpädagogik. Das Projekt ist Teil der Publikation Ausgerechnet Algorithmen (2023).
+Sourcecode und Beschreibung zum Projekt im Umgang mit automatischer Spracherkennung im Kontext einer diversitätssensiblen Medienpädagogik. Das Projekt ist Teil der Publikation Ausgerechnet Algorithmen (2023), erschienen im Jahrbuch Medienpädagogik 20: Inklusive Medienbildung der Sektion Medienpädagogik der Deutschen Gesellschaft für Erziehungswissenschaft (DGfE).
+
+Stricker, J., & Verständig, D. (2023). Ausgerechnet Algorithmen: Über die Erklärbarkeit automatischer Spracherkennung und die Konsequenzen für Theorie und Praxis der Inklusiven Medienbildung. MedienPädagogik: Zeitschrift für Theorie Und Praxis Der Medienbildung, 20(Inklusive Medienbildung), 91–124. [https://doi.org/10.21240/mpaed/jb20/2023.09.04.X](https://doi.org/10.21240/mpaed/jb20/2023.09.04.X)
 
 ## Allgemeine Informationen
 
